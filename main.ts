@@ -5,16 +5,16 @@
 const enum TouchSensor {
     T11 = 0b100000000000,
     T10 = 0b010000000000,
-    T9  = 0b001000000000,
-    T8  = 0b000100000000,
-    T7  = 0b000010000000,
-    T6  = 0b000001000000,
-    T5  = 0b000000100000,
-    T4  = 0b000000010000,
-    T3  = 0b000000001000,
-    T2  = 0b000000000100,
-    T1  = 0b000000000010,
-    T0  = 0b000000000001
+    T9 = 0b001000000000,
+    T8 = 0b000100000000,
+    T7 = 0b000010000000,
+    T6 = 0b000001000000,
+    T5 = 0b000000100000,
+    T4 = 0b000000010000,
+    T3 = 0b000000001000,
+    T2 = 0b000000000100,
+    T1 = 0b000000000010,
+    T0 = 0b000000000001
 }
 
 //% weight=2 color=#1174EE icon="\uf25a" block="mpr121 I2C Touch Sensor"
@@ -163,15 +163,15 @@ namespace mpr121 {
     }
 
     /**
-    * Mache etwas wenn ein Sensor berührt wurde.
-    * Dieses Touch-Ereignis wird direkt zu Beginn der Berührung ausgeführt.
+     * Mache etwas wenn ein Sensor berührt wurde.
+     * Dieses Touch-Ereignis wird direkt zu Beginn der Berührung ausgeführt.
      * @param sensor der Touchsensor der überwacht werden soll, z.B.: TouchSensor.T0
      * @param handler body code der bei der Berührung des Sensors ausgeführt werden soll
     */
 
     //% blockId=mpr121_touch_on_touch_sensor_down
     //% block="on touch sensor | %sensor | touched"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=5
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
     //% sensor.fieldOptions.tooltips="false"
     //% weight=65
     export function onTouchSensorTouched(sensor: TouchSensor, handler: () => void) {
@@ -182,15 +182,15 @@ namespace mpr121 {
     }
 
     /**
-    * Do something when a specific sensor is released.
-    * A touch release event is notified once at the end of a touch operation.
-     * @param sensor the touch sensor to be checked, eg: TouchSensor.T5
-     * @param handler body code to run when event is raised
+    * Mache etwas wenn ein Sensor losgelassen wird.
+    * Ein Loslass-Ereignis wird am Ende der Berührung ausgeführt.
+    * @param sensor der Touchsensor der überwacht werden soll, z.B.: TouchSensor.T0
+    * @param handler body code der beim Loslassen des Sensors ausgeführt werden soll
     */
 
-    //% blockId=makerbit_touch_on_touch_sensor_released
+    //% blockId=mpr121_touch_on_touch_sensor_released
     //% block="on touch sensor | %sensor | released"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=5
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
     //% sensor.fieldOptions.tooltips="false"
     //% weight=64
     export function onTouchSensorReleased(sensor: TouchSensor, handler: () => void) {
