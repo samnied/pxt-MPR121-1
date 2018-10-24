@@ -40,7 +40,7 @@ namespace mpr121 {
      * Initialize the touch controller.
      */
 
-    //% blockId="makerbit_touch_init" block="initialize touch"
+    //% blockId="mpr121_touch_init" block="initialisiere touch-Sensor"
     //% weight=70
     function initTouchController(): void {
         touchController = {
@@ -168,7 +168,7 @@ namespace mpr121 {
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T5
      * @param handler body code to run when event is raised
     */
-    //% subcategory="Touch"
+
     //% blockId=makerbit_touch_on_touch_sensor_down
     //% block="on touch sensor | %sensor | touched"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=5
@@ -187,7 +187,7 @@ namespace mpr121 {
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T5
      * @param handler body code to run when event is raised
     */
-    //% subcategory="Touch"
+
     //% blockId=makerbit_touch_on_touch_sensor_released
     //% block="on touch sensor | %sensor | released"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=5
@@ -204,7 +204,7 @@ namespace mpr121 {
     * Do something when the beginning of a touch event is detected.
     * @param handler body code to run when event is raised
     */
-    //% subcategory="Touch"
+
     //% blockId=makerbit_touch_on_touched
     //% block="on any touch sensor touched"
     //% weight=60
@@ -219,7 +219,7 @@ namespace mpr121 {
     * Do something when the end of a touch operation is detected.
     * @param handler body code to run when event is raised
     */
-    //% subcategory="Touch"
+
     //% blockId=makerbit_touch_on_released
     //% block="on any touch sensor released"
     //% weight=59
@@ -250,7 +250,7 @@ namespace mpr121 {
      * It could be either a sensor touched or released event.
      * This block intended to be used inside of touch event handlers.
      */
-    //% subcategory="Touch"
+
     //% blockId="makerbit_touch_current_touch_sensor
     //% block="touch sensor"
     //% weight=50
@@ -273,7 +273,7 @@ namespace mpr121 {
      * Returns true if a specific touch sensor is currently touched. False otherwise.
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T5
      */
-    //% subcategory="Touch"
+
     //% blockId="makerbit_touch_is_touch_sensor_touched" block="touch sensor | %sensor | is touched"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=5
     //% sensor.fieldOptions.tooltips="false"
