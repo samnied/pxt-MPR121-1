@@ -170,7 +170,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_touch_sensor_down
-    //% block="on touch sensor | %sensor | touched"
+    //% block="wenn Touchsensor | %sensor | berührt"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
     //% sensor.fieldOptions.tooltips="false"
     //% weight=65
@@ -189,7 +189,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_touch_sensor_released
-    //% block="on touch sensor | %sensor | released"
+    //% block="wenn Touchsensor | %sensor | losgelassen"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
     //% sensor.fieldOptions.tooltips="false"
     //% weight=64
@@ -206,7 +206,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_touched
-    //% block="on any touch sensor touched"
+    //% block="wenn ein Sensor berührt wurde"
     //% weight=60
     export function onAnyTouchSensorTouched(handler: () => void) {
         initBackgroundDetection()
@@ -221,7 +221,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_released
-    //% block="on any touch sensor released"
+    //% block="wenn ein Sensor losgelassen wurde"
     //% weight=59
     export function onAnyTouchSensorReleased(handler: () => void) {
         initBackgroundDetection()
@@ -252,7 +252,7 @@ namespace mpr121 {
      */
 
     //% blockId="mpr121_touch_current_touch_sensor
-    //% block="touch sensor"
+    //% block="aktueller Touchsensor"
     //% weight=50
     export function touchSensor(): number {
         return getSensorIndexFromSensorBitField(touchController.lastEventValue)
@@ -271,10 +271,10 @@ namespace mpr121 {
 
     /**
      * Gibt wahr zurück, wenn ein spezieller Touchsensor aktuell berühert wurde. Ansonsten falsch.
-     * @param sensor the touch sensor to be checked, eg: TouchSensor.T5
+     * @param sensor the touch sensor to be checked, eg: TouchSensor.T0
      */
 
-    //% blockId="mpr121_touch_is_touch_sensor_touched" block="touch sensor | %sensor | is touched"
+    //% blockId="mpr121_touch_is_touch_sensor_touched" block="Touchsensor | %sensor | ist berührt"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=1
     //% sensor.fieldOptions.tooltips="false"
     //% weight=40
