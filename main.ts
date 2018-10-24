@@ -17,7 +17,9 @@ const enum TouchSensor {
     T16 = 0b000000000001
 }
 
-namespace makerbit {
+//% weight=2 color=#1174EE icon="\uf25a" block="Grove I2C Touch Sensor"
+
+namespace mpr121 {
 
     const MPR121_ADDRESS = 0x5A
     const TOUCH_STATUS_PAUSE_BETWEEN_READ = 50
@@ -37,7 +39,7 @@ namespace makerbit {
     /**
      * Initialize the touch controller.
      */
-    
+
     //% blockId="makerbit_touch_init" block="initialize touch"
     //% weight=70
     function initTouchController(): void {
