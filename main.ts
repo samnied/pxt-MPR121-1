@@ -33,8 +33,8 @@ namespace mpr121 {
 
     let touchController: TouchState
 
-    const MICROBIT_MAKERBIT_TOUCH_SENSOR_TOUCHED_ID = 2148
-    const MICROBIT_MAKERBIT_TOUCH_SENSOR_RELEASED_ID = 2149
+    const MPR121_TOUCH_SENSOR_TOUCHED_ID = 2148
+    const MPR121_TOUCH_SENSOR_RELEASED_ID = 2149
 
     /**
      * Initialize the touch controller.
@@ -145,14 +145,14 @@ namespace mpr121 {
                 // Raise event when touch starts
                 if ((touchSensorBit & touchStatus) !== 0) {
                     if (!((touchSensorBit & previousTouchStatus) !== 0)) {
-                        control.raiseEvent(MICROBIT_MAKERBIT_TOUCH_SENSOR_TOUCHED_ID, touchSensorBit)
+                        control.raiseEvent(MPR121_TOUCH_SENSOR_TOUCHED_ID, touchSensorBit)
                     }
                 }
 
                 // Raise event when touch ends
                 if ((touchSensorBit & touchStatus) === 0) {
                     if (!((touchSensorBit & previousTouchStatus) === 0)) {
-                        control.raiseEvent(MICROBIT_MAKERBIT_TOUCH_SENSOR_RELEASED_ID, touchSensorBit)
+                        control.raiseEvent(MPR121_TOUCH_SENSOR_RELEASED_ID, touchSensorBit)
                     }
                 }
             }
@@ -163,7 +163,7 @@ namespace mpr121 {
     }
 
     /**
-     * Mache etwas wenn ein Sensor berührt wurde.
+     * Mache etwas, wenn ein spezieller Sensor berührt wird.
      * Dieses Touch-Ereignis wird direkt zu Beginn der Berührung ausgeführt.
      * @param sensor der Touchsensor der überwacht werden soll, z.B.: TouchSensor.T0
      * @param handler body code der bei der Berührung des Sensors ausgeführt werden soll
@@ -176,13 +176,13 @@ namespace mpr121 {
     //% weight=65
     export function onTouchSensorTouched(sensor: TouchSensor, handler: () => void) {
         initBackgroundDetection()
-        control.onEvent(MICROBIT_MAKERBIT_TOUCH_SENSOR_TOUCHED_ID, sensor, () => {
+        control.onEvent(MPR121_TOUCH_SENSOR_TOUCHED_ID, sensor, () => {
             setupContextAndNotify(handler)
         })
     }
 
     /**
-    * Mache etwas wenn ein Sensor losgelassen wird.
+    * Mache etwas, wenn ein spezieller Sensor losgelassen wird.
     * Ein Loslass-Ereignis wird am Ende der Berührung ausgeführt.
     * @param sensor der Touchsensor der überwacht werden soll, z.B.: TouchSensor.T0
     * @param handler body code der beim Loslassen des Sensors ausgeführt werden soll
@@ -195,37 +195,37 @@ namespace mpr121 {
     //% weight=64
     export function onTouchSensorReleased(sensor: TouchSensor, handler: () => void) {
         initBackgroundDetection()
-        control.onEvent(MICROBIT_MAKERBIT_TOUCH_SENSOR_RELEASED_ID, sensor, () => {
+        control.onEvent(MPR121_TOUCH_SENSOR_RELEASED_ID, sensor, () => {
             setupContextAndNotify(handler)
         })
     }
 
     /**
-    * Do something when the beginning of a touch event is detected.
+    * Mache etwas, wenn ein beliebiger Sensor berührt wird.
     * @param handler body code to run when event is raised
     */
 
-    //% blockId=makerbit_touch_on_touched
+    //% blockId=mpr121_touch_on_touched
     //% block="on any touch sensor touched"
     //% weight=60
     export function onAnyTouchSensorTouched(handler: () => void) {
         initBackgroundDetection()
-        control.onEvent(MICROBIT_MAKERBIT_TOUCH_SENSOR_TOUCHED_ID, EventBusValue.MICROBIT_EVT_ANY, () => {
+        control.onEvent(MPR121_TOUCH_SENSOR_TOUCHED_ID, EventBusValue.MICROBIT_EVT_ANY, () => {
             setupContextAndNotify(handler)
         })
     }
 
     /**
-    * Do something when the end of a touch operation is detected.
+    * Mache etwas, wenn ein beliebiger Sensor losgelassen wird.
     * @param handler body code to run when event is raised
     */
 
-    //% blockId=makerbit_touch_on_released
+    //% blockId=mpr121_touch_on_released
     //% block="on any touch sensor released"
     //% weight=59
     export function onAnyTouchSensorReleased(handler: () => void) {
         initBackgroundDetection()
-        control.onEvent(MICROBIT_MAKERBIT_TOUCH_SENSOR_RELEASED_ID, EventBusValue.MICROBIT_EVT_ANY, () => {
+        control.onEvent(MPR121_TOUCH_SENSOR_RELEASED_ID, EventBusValue.MICROBIT_EVT_ANY, () => {
             setupContextAndNotify(handler)
         })
     }
@@ -246,12 +246,12 @@ namespace mpr121 {
     }
 
     /**
-     * Returns the sensor index of the last touch event that was received.
-     * It could be either a sensor touched or released event.
-     * This block intended to be used inside of touch event handlers.
+     * Gibt die Indexnummer des letzten Berührungsereignisses das empfangen wurde zurück.
+     * Das kann entweder ein Berühr- oder Loslassereignis sein.
+     * Dieser Block ist dafür gedacht innerhalb der touch event handler verwendet zu werden.
      */
 
-    //% blockId="makerbit_touch_current_touch_sensor
+    //% blockId="mpr121_touch_current_touch_sensor
     //% block="touch sensor"
     //% weight=50
     export function touchSensor(): number {
@@ -259,8 +259,8 @@ namespace mpr121 {
     }
 
     function getSensorIndexFromSensorBitField(touchSensorBit: TouchSensor) {
-        let bit = TouchSensor.T5
-        for (let sensorIndex = 5; sensorIndex <= 16; sensorIndex++) {
+        let bit = TouchSensor.T0
+        for (let sensorIndex = 0; sensorIndex <= 11; sensorIndex++) {
             if ((bit & touchSensorBit) !== 0) {
                 return sensorIndex // return first hit
             }
@@ -270,12 +270,12 @@ namespace mpr121 {
     }
 
     /**
-     * Returns true if a specific touch sensor is currently touched. False otherwise.
+     * Gibt wahr zurück, wenn ein spezieller Touchsensor aktuell berühert wurde. Ansonsten falsch.
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T5
      */
 
-    //% blockId="makerbit_touch_is_touch_sensor_touched" block="touch sensor | %sensor | is touched"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=5
+    //% blockId="mpr121_touch_is_touch_sensor_touched" block="touch sensor | %sensor | is touched"
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=1
     //% sensor.fieldOptions.tooltips="false"
     //% weight=40
     export function isTouched(sensor: TouchSensor): boolean {
