@@ -163,13 +163,13 @@ namespace mpr121 {
     }
 
     /**
-    * Do something when a specific sensor is touched.
-    * This touch event is notified once at the beginning of a touch operation.
-     * @param sensor the touch sensor to be checked, eg: TouchSensor.T5
-     * @param handler body code to run when event is raised
+    * Mache etwas wenn ein Sensor berührt wurde.
+    * Dieses Touch-Ereignis wird direkt zu Beginn der Berührung ausgeführt.
+     * @param sensor der Touchsensor der überwacht werden soll, z.B.: TouchSensor.T0
+     * @param handler body code der bei der Berührung des Sensors ausgeführt werden soll
     */
 
-    //% blockId=makerbit_touch_on_touch_sensor_down
+    //% blockId=mpr121_touch_on_touch_sensor_down
     //% block="on touch sensor | %sensor | touched"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=5
     //% sensor.fieldOptions.tooltips="false"
