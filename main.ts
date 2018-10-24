@@ -17,7 +17,7 @@ const enum TouchSensor {
     T16 = 0b000000000001
 }
 
-//% weight=2 color=#1174EE icon="\uf25a" block="Grove I2C Touch Sensor"
+//% weight=2 color=#1174EE icon="\uf25a" block="mpr121 I2C Touch Sensor"
 
 namespace mpr121 {
 
