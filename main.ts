@@ -275,7 +275,7 @@ namespace mpr121 {
      */
 
     //% blockId="mpr121_touch_is_touch_sensor_touched" block="Touchsensor | %sensor | ist berührt"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=3
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
     //% sensor.fieldOptions.tooltips="false"
     //% weight=40
     export function isTouched(sensor: TouchSensor): boolean {
