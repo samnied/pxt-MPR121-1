@@ -171,7 +171,7 @@ namespace mpr121 {
 
     //% blockId=mpr121_touch_on_touch_sensor_down
     //% block="wenn Touchsensor | %sensor | berührt"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=11
     //% sensor.fieldOptions.tooltips="false"
     //% weight=65
     export function onTouchSensorTouched(sensor: TouchSensor, handler: () => void) {
@@ -190,7 +190,7 @@ namespace mpr121 {
 
     //% blockId=mpr121_touch_on_touch_sensor_released
     //% block="wenn Touchsensor | %sensor | losgelassen"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=11
     //% sensor.fieldOptions.tooltips="false"
     //% weight=64
     export function onTouchSensorReleased(sensor: TouchSensor, handler: () => void) {
@@ -270,12 +270,12 @@ namespace mpr121 {
     }
 
     /**
-     * Gibt wahr zurück, wenn ein spezieller Touchsensor aktuell berühert wurde. Ansonsten falsch.
+     * Gibt wahr zurück, wenn ein spezieller Touchsensor aktuell berührt wurde. Ansonsten falsch.
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T0
      */
 
     //% blockId="mpr121_touch_is_touch_sensor_touched" block="Touchsensor | %sensor | ist berührt"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=1
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=3
     //% sensor.fieldOptions.tooltips="false"
     //% weight=40
     export function isTouched(sensor: TouchSensor): boolean {
