@@ -171,7 +171,7 @@ namespace mpr121 {
 
     //% blockId=mpr121_touch_on_touch_sensor_down
     //% block="wenn Touchsensor | %sensor | berührt"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=11
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
     //% sensor.fieldOptions.tooltips="false"
     //% weight=65
     export function onTouchSensorTouched(sensor: TouchSensor, handler: () => void) {
@@ -190,7 +190,7 @@ namespace mpr121 {
 
     //% blockId=mpr121_touch_on_touch_sensor_released
     //% block="wenn Touchsensor | %sensor | losgelassen"
-    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=11
+    //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=0
     //% sensor.fieldOptions.tooltips="false"
     //% weight=64
     export function onTouchSensorReleased(sensor: TouchSensor, handler: () => void) {
