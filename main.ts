@@ -270,7 +270,7 @@ namespace mpr121 {
     }
 
     /**
-     * Gibt wahr zurück, wenn ein spezieller Touchsensor aktuell berührt wurde. Ansonsten falsch.
+     * Gibt wahr zurück, wenn ein spezieller Touchsensor gerade berührt wurde. Ansonsten falsch.
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T0
      */
 
