@@ -15,10 +15,11 @@ Read more at https://makecode.microbit.org/packages/build-your-own
 
 ## License
 
-
+MIT
 
 ## Supported targets
 
+* for PXT/Calliope
 * for PXT/microbit
 (The metadata above is needed for package search.)
 
