@@ -251,15 +251,15 @@ namespace mpr121 {
      * Dieser Block ist dafür gedacht innerhalb der touch event handler verwendet zu werden.
      */
 
-   // //% blockId="mpr121_touch_current_touch_sensor
-   // //% block="Berührungssensor"
-   // //% weight=50
-   // export function touchSensor(): number {
-   //     return getSensorIndexFromSensorBitField(touchController.lastEventValue)
-   // }
+    //% blockId="mpr121_touch_current_touch_sensor
+    //% block="Berührungssensor"
+    //% weight=50
+    export function touchSensor(): number {
+        return getSensorIndexFromSensorBitField(touchController.lastEventValue)
+    }
 
     function getSensorIndexFromSensorBitField(touchSensorBit: TouchSensor) {
-        let bit = TouchSensor.T0
+        let bit = TouchSensor.T11
         for (let sensorIndex = 0; sensorIndex <= 11; sensorIndex++) {
             if ((bit & touchSensorBit) !== 0) {
                 return sensorIndex // return first hit
