@@ -11,19 +11,33 @@ https://github.com/1010Technologies/pxt-makerbit von Roger Wagner / Philipp Henk
 ## Reference
 
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/1.png) 
+
+mache etwas wenn Berührungssensor T11 (bzw. T0-T11) berührt wurde. (nämlich den Code ausführen der umklammert wird)
+
+
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/2.png) 
+
+mache etwas wenn Berührungssensor T11 losgelassen wurde
+
+
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/3.png) 
+
+mache etwas wenn irgendeiner der 12 Berührungssensoren berührt wurde
+
+
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/4.png) 
+
+mache etwas wenn irgendeiner der 12 Berührungssensoren losgelassen wurde
+
+
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/5.png) 
+
+gibt *wahr* zurück wenn irgendein Sensor berührt oder losgelassen wurde. Ansonsten *falsch*
+
+
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/6.png) 
 
-- [ ] Add a reference for your blocks here
-- [ ] Add "icon.png" image (300x200) in the root folder
-- [ ] Add "- beta" to the GitHub project description if you are still iterating it.
-- [ ] Turn on your automated build on https://travis-ci.org
-- [ ] Use "pxt bump" to create a tagged release on GitHub
-- [ ] Get your package reviewed and approved https://makecode.microbit.org/packages/approval
-
+gibt *wahr* zurück wenn irgendein Sensor To berührt wurde. Ansonsten *falsch*
 
 
 ## License
