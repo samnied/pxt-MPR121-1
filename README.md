@@ -30,9 +30,6 @@ mache etwas wenn irgendeiner der 12 Berührungssensoren berührt wurde
 mache etwas wenn irgendeiner der 12 Berührungssensoren losgelassen wurde
 
 
-![](https://github.com/MKleinSB/pxt-mpr121/blob/master/5.png) 
-
-gibt *wahr* zurück wenn irgendein Sensor berührt oder losgelassen wurde. Ansonsten *falsch*
 
 
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/6.png) 
