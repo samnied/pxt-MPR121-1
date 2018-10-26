@@ -37,7 +37,7 @@ gibt *wahr* zurück wenn irgendein Sensor berührt oder losgelassen wurde. Anson
 
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/6.png) 
 
-gibt *wahr* zurück wenn irgendein Sensor To berührt wurde. Ansonsten *falsch*
+gibt *wahr* zurück wenn Sensor T0 (wahlweise T0-T11) berührt wurde. Ansonsten *falsch*
 
 
 ## License
