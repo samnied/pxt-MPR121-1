@@ -1,6 +1,6 @@
 // mpr 121 touch blocks
 // Auf Basis von https://github.com/1010Technologies/pxt-makerbit
-// (C) 
+// Copyright (c) 2018 Roger Wagner, Philipp Henkel & Michael Klein
 
 const enum TouchSensor {
     T11 = 0b100000000000,
@@ -259,7 +259,7 @@ namespace mpr121 {
     }
 
     function getSensorIndexFromSensorBitField(touchSensorBit: TouchSensor) {
-        let bit = TouchSensor.T11
+        let bit = TouchSensor.T0
         for (let sensorIndex = 0; sensorIndex <= 11; sensorIndex++) {
             if ((bit & touchSensorBit) !== 0) {
                 return sensorIndex // return first hit
