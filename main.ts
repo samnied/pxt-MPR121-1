@@ -1,4 +1,4 @@
-// mpr 121 touch blocks
+// mpr 121 touch blocks based on touch.ts 0.17.4
 // Auf Basis von https://github.com/1010Technologies/pxt-makerbit
 // Copyright (c) 2018 Roger Wagner, Philipp Henkel & Michael Klein
 
