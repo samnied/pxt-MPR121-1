@@ -1,6 +1,7 @@
-// mpr 121 touch blocks based on touch.ts 0.17.4
+// mpr 121 touch blocks based on touch.ts 0.17.5
 // Auf Basis von https://github.com/1010Technologies/pxt-makerbit
 // Copyright (c) 2018 Roger Wagner, Philipp Henkel & Michael Klein
+// MIT License
 
 const enum TouchSensor {
     T11 = 0b100000000000,
@@ -136,7 +137,7 @@ namespace mpr121 {
                 // Raise event when touch ends
                 if ((touchSensorBit & touchStatus) === 0) {
                     if (!((touchSensorBit & previousTouchStatus) === 0)) {
-                        control.raiseEvent(MPR121_TOUCH_SENSOR_TOUCHED_ID, touchSensorBit)
+                        control.raiseEvent(MPR121_TOUCH_SENSOR_RELEASED_ID, touchSensorBit)
                         touchController.lastEventValue = touchSensorBit
                     }
                 }
