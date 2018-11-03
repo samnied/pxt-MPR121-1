@@ -228,7 +228,7 @@ namespace mpr121 {
      */
 
     //% blockId="mpr121_touch_current_touch_sensor
-    //% block="letzter Berührungssensor"
+    //% block="zuletzt berührter Sensor"
     //% weight=50
     export function touchSensor(): number {
         initTouchController()
