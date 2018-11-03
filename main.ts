@@ -233,10 +233,8 @@ namespace mpr121 {
     export function touchSensor(): number {
         initTouchController()
         if (touchController.lastEventValue !== 0) {
-            basic.showIcon(IconNames.No) // for debugging only
             return getSensorIndexFromSensorBitField(touchController.lastEventValue)
         } else {
-            basic.showIcon(IconNames.Heart) // for debugging only
             return 0
         }
     }
