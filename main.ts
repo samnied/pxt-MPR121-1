@@ -18,7 +18,7 @@ const enum TouchSensor {
     T0 = 0b000000000001
 }
 
-//% weight=2 color=#1174EE icon="\uf25a" block="mpr121 I2C Touch Sensor"
+//% weight=2 color=#1174EE icon="\uf25a" block="mpr121 Touch Sensor"
 
 namespace mpr121 {
 
@@ -243,7 +243,7 @@ namespace mpr121 {
         let bit = TouchSensor.T11
         for (let sensorIndex = 0; sensorIndex <= 11; sensorIndex++) {
             if ((bit & touchSensorBit) !== 0) {
-                return 11-sensorIndex // return first hit
+                return 11 - sensorIndex // return first hit
             }                         // Pinnummern an Breakoutboard angepasst.
             bit >>= 1
         }
