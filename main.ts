@@ -244,7 +244,7 @@ namespace mpr121 {
         for (let sensorIndex = 0; sensorIndex <= 11; sensorIndex++) {
             if ((bit & touchSensorBit) !== 0) {
                 return 11-sensorIndex // return first hit
-            }
+            }                         // Pinnummern an Breakoutboard angepasst.
             bit >>= 1
         }
         return 0
