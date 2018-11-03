@@ -29,7 +29,9 @@ mache etwas wenn irgendeiner der 12 Berührungssensoren berührt wurde
 
 mache etwas wenn irgendeiner der 12 Berührungssensoren losgelassen wurde
 
+![](https://github.com/MKleinSB/pxt-mpr121/blob/master/5.png) 
 
+gibt die Nummer (0-11) des berührten Sensors zurück. Kann z.B. innerhalb von "wenn beliebiger Sensor berührt/losgelassen" verwendet werden.
 
 
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/6.png) 
