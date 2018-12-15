@@ -1,15 +1,13 @@
 {
     "name": "pxt-mpr121",
     "version": "0.0.20",
-    "description": "",
+    "description": "Blocks for the mpr121 touch sensor",
     "dependencies": {
         "core": "*",
         "radio": "*"
     },
     "files": [
-        "README.md",
-        "main.ts",
-        "_locales/fr/mpr121-strings.json"
+        "main.ts"
     ],
     "testFiles": [
         "test.ts"
