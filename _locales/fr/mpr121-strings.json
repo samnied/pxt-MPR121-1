@@ -1,2 +1,14 @@
 {
+"mpr121.TouchEvent.TSensor": "The index of the touch sensor.",
+"mpr121.onAnyTouchSensorReleased": "Do something when the end of a touch operation is detected.",
+"mpr121.onAnyTouchSensorReleased|param|handler": "body code to run when event is raised",
+"mpr121.onAnyTouchSensorTouched": "Do something when the beginning of a touch event is detected.",
+"mpr121.onAnyTouchSensorTouched|param|handler": "body code to run when event is raised",
+"mpr121.onTouchSensorReleased": "Do something when a specific sensor is released.\nA touch release event is notified once at the end of a touch operation.",
+"mpr121.onTouchSensorReleased|param|handler": "body code to run when event is raised",
+"mpr121.onTouchSensorReleased|param|sensor": "the touch sensor to be checked, eg: TouchSensor.T5",
+"mpr121.onTouchSensorTouched": "Do something when a specific sensor is touched.\nThis touch event is notified once at the beginning of a touch operation.",
+"mpr121.onTouchSensorTouched|param|handler": "body code to run when event is raised",
+"mpr121.onTouchSensorTouched|param|sensor": "the touch sensor to be checked, eg: TouchSensor.T5",
+"mpr121.touchSensor": "Returns the index of the sensor that is currently touched and 0 if no sensor is touched.\nIf multiple sensors are touched, the one with the lowest index is returned."
 }
