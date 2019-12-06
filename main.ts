@@ -1,21 +1,21 @@
-// mpr 121 touch blocks 0.0.19 based on touch.ts 0.17.5
+// mpr 121 touch blocks based on touch.ts 0.17.5
 // Auf Basis von https://github.com/1010Technologies/pxt-makerbit
 // Copyright (c) 2018 Roger Wagner, Philipp Henkel & Michael Klein
 // MIT License
 
 const enum TouchSensor {
-    T11 = 0b100000000000,
-    T10 = 0b010000000000,
-    T9 = 0b001000000000,
-    T8 = 0b000100000000,
-    T7 = 0b000010000000,
-    T6 = 0b000001000000,
-    T5 = 0b000000100000,
-    T4 = 0b000000010000,
-    T3 = 0b000000001000,
-    T2 = 0b000000000100,
+    T0 = 0b000000000001,
     T1 = 0b000000000010,
-    T0 = 0b000000000001
+    T2 = 0b000000000100,
+    T3 = 0b000000001000,
+    T4 = 0b000000010000,
+    T5 = 0b000000100000,
+    T6 = 0b000001000000,
+    T7 = 0b000010000000,
+    T8 = 0b000100000000,
+    T9 = 0b001000000000,
+    T10 = 0b010000000000,
+    T11 = 0b100000000000
 }
 
 //% weight=2 color=#1174EE icon="\uf25a" block="mpr121 Touch Sensor"
