@@ -1,6 +1,6 @@
 {
     "name": "pxt-mpr121",
-    "version": "0.0.20",
+    "version": "0.0.21",
     "description": "Blocks for the mpr121 touch sensor",
     "dependencies": {
         "core": "*",
