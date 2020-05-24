@@ -18,7 +18,7 @@ const enum TouchSensor {
     CH11 = 0b100000000000
 }
 
-//% weight=2 color=#1174EE icon="\uf25a" block="mpr121 Touch Sensor"
+//% weight=2 color=#1174EE icon="\uf25a" block="MPR121 Touch Sensor"
 
 namespace mpr121 {
 
@@ -156,7 +156,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_touch_sensor_down
-    //% block="wenn Berührungssensor | %sensor | berührt"
+    //% block="wenn | %sensor | berührt"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=3
     //% sensor.fieldOptions.tooltips="false"
     //% weight=65
@@ -175,7 +175,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_touch_sensor_released
-    //% block="wenn Berührungssensor | %sensor | losgelassen"
+    //% block="wenn | %sensor | losgelassen"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=3
     //% sensor.fieldOptions.tooltips="false"
     //% weight=64
@@ -255,7 +255,7 @@ namespace mpr121 {
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T0
      */
 
-    //% blockId="mpr121_touch_is_touch_sensor_touched" block="Berührungssensor | %sensor | wird berührt"
+    //% blockId="mpr121_touch_is_touch_sensor_touched" block="%sensor | wird berührt"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=3
     //% sensor.fieldOptions.tooltips="false"
     //% weight=40
