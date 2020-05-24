@@ -192,7 +192,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_touched
-    //% block="wenn beliebiger Sensor berührt"
+    //% block="wenn beliebiger CH berührt"
     //% weight=60
     export function onAnyTouchSensorTouched(handler: () => void) {
         initTouchController()
@@ -207,7 +207,7 @@ namespace mpr121 {
     */
 
     //% blockId=mpr121_touch_on_released
-    //% block="wenn beliebiger Sensor losgelassen"
+    //% block="wenn beliebiger CH losgelassen"
     //% weight=59
     export function onAnyTouchSensorReleased(handler: () => void) {
         initTouchController()
@@ -228,7 +228,7 @@ namespace mpr121 {
      */
 
     //% blockId="mpr121_touch_current_touch_sensor
-    //% block="zuletzt berührter Sensor"
+    //% block="zuletzt berührter CH"
     //% weight=50
     export function touchSensor(): number {
         initTouchController()
@@ -255,7 +255,7 @@ namespace mpr121 {
      * @param sensor the touch sensor to be checked, eg: TouchSensor.T0
      */
 
-    //% blockId="mpr121_touch_is_touch_sensor_touched" block="%sensor | wird berührt"
+    //% blockId="mpr121_touch_is_touch_sensor_touched" block="%CH | wird berührt"
     //% sensor.fieldEditor="gridpicker" sensor.fieldOptions.columns=3
     //% sensor.fieldOptions.tooltips="false"
     //% weight=40
