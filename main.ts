@@ -4,25 +4,25 @@
 // MIT License
 
 const enum TouchSensor {
-    T0 = 0b000000000001,
-    T1 = 0b000000000010,
-    T2 = 0b000000000100,
-    T3 = 0b000000001000,
-    T4 = 0b000000010000,
-    T5 = 0b000000100000,
-    T6 = 0b000001000000,
-    T7 = 0b000010000000,
-    T8 = 0b000100000000,
-    T9 = 0b001000000000,
-    T10 = 0b010000000000,
-    T11 = 0b100000000000
+    CH0 = 0b000000000001,
+    CH1 = 0b000000000010,
+    CH2 = 0b000000000100,
+    CH3 = 0b000000001000,
+    CH4 = 0b000000010000,
+    CH5 = 0b000000100000,
+    CH6 = 0b000001000000,
+    CH7 = 0b000010000000,
+    CH8 = 0b000100000000,
+    Ch9 = 0b001000000000,
+    CH10 = 0b010000000000,
+    CH11 = 0b100000000000
 }
 
 //% weight=2 color=#1174EE icon="\uf25a" block="mpr121 Touch Sensor"
 
 namespace mpr121 {
 
-    const MPR121_ADDRESS = 0x5A
+    const MPR121_ADDRESS = 0x5B
     const TOUCH_STATUS_PAUSE_BETWEEN_READ = 50
 
     interface TouchController {
@@ -240,7 +240,7 @@ namespace mpr121 {
     }
 
     function getSensorIndexFromSensorBitField(touchSensorBit: TouchSensor) {
-        let bit = TouchSensor.T11
+        let bit = TouchSensor.CH11
         for (let sensorIndex = 0; sensorIndex <= 11; sensorIndex++) {
             if ((bit & touchSensorBit) !== 0) {
                 return 11 - sensorIndex // return first hit
