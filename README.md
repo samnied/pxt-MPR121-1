@@ -1,13 +1,6 @@
 
 # pxt-mpr121
 
-![](https://github.com/MKleinSB/pxt-mpr121/blob/master/mpr121Breakout.png) 
-
-Neben der Grove Variante des MPR121 Touch von Seeed gibt es Breakoutboards für den MPR121 schon für unter 1,50€. Gleich mal 5 bestellt und mit dem Pakt von Infchem verwendet https://github.com/infchem/pxt-calliope-grove-mpr121. Soweit alles wunderbar. 
-Irgendwann habe ich den makerbit  http://makerbit.com/ entdeckt und das passende Paket dazu. Megageil würde mein Sohn sagen. Hier läuft das ja mit Events! Und man kann unterscheiden ob berührt oder losgelassen!
-Da passe ich doch einfach das ganze Zeug mal an und mache ein schönes Paket draus. Und hier ist es! Basierend auf dem Paket 
-https://github.com/1010Technologies/pxt-makerbit von Roger Wagner / Philipp Henkel
-
 ## Reference
 
 ![](https://github.com/MKleinSB/pxt-mpr121/blob/master/1.png) 
@@ -45,6 +38,5 @@ MIT
 
 ## Supported targets
 
-* for PXT/Calliope
 * for PXT/microbit
 
