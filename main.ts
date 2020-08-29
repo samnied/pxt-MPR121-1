@@ -45,8 +45,9 @@ namespace mpr121 {
      */
     //% blockId="mpr121_set_address" 
     //% block="Set I2C address to %address" 
-    export function setAddress(address: number): void {
-        MPR121_ADDRESS = address
+    //% address.defl="0x5B"
+    export function setAddress(address: string): void {
+        MPR121_ADDRESS = parseInt(address, 16)
     }
 
     /**
