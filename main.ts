@@ -38,17 +38,6 @@ namespace mpr121 {
 
 
     /**
-     * Set device address
-     * @param address : I2C address
-     */
-    //% blockId="mpr121_set_address" 
-    //% block="Set I2C address to %address" 
-    //% address.defl="0x5B"
-    export function setAddress(address: string): void {
-        MPR121_ADDRESS = parseInt(address, 16)
-    }
-
-    /**
      * Initialize the touch controller.
      */
     //% blockId="mpr121_touch_init" block="initialisiere touch-Sensor"
