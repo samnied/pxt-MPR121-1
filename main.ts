@@ -21,12 +21,10 @@ const enum TouchSensor {
 //% weight=2 color=#1174EE icon="\uf25a" block="MPR121 Touch Sensor"
 
 namespace mpr121 {
-
-    //const MPR121_ADDRESS = 0x5B
+    
     let MPR121_ADDRESS = 0x5B
     
     const TOUCH_STATUS_PAUSE_BETWEEN_READ = 50
-    let mpr121_ADD = 0x5B
 
     interface TouchController {
         lastTouchStatus: number
