@@ -22,8 +22,11 @@ const enum TouchSensor {
 
 namespace mpr121 {
 
-    const MPR121_ADDRESS = 0x5B
+    //const MPR121_ADDRESS = 0x5B
+    let MPR121_ADDRESS = 0x5B
+    
     const TOUCH_STATUS_PAUSE_BETWEEN_READ = 50
+    let mpr121_ADD = 0x5B
 
     interface TouchController {
         lastTouchStatus: number
@@ -35,10 +38,20 @@ namespace mpr121 {
     const MPR121_TOUCH_SENSOR_TOUCHED_ID = 2148
     const MPR121_TOUCH_SENSOR_RELEASED_ID = 2149
 
+
+    /**
+     * Set device address
+     * @param address : I2C address
+     */
+    //% blockId="mpr121_set_address" 
+    //% block="Set I2C address to %address" 
+    export function setAddress(address: number): void {
+        MPR121_ADDRESS = address
+    }
+
     /**
      * Initialize the touch controller.
      */
-
     //% blockId="mpr121_touch_init" block="initialisiere touch-Sensor"
     //% weight=70
     function initTouchController(): void {
